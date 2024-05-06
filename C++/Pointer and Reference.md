@@ -51,7 +51,7 @@ Basically, pointers are "true" value types in an of themselves and <mark style="
 
 <mark style="background: #FFB86CA6;">When we say a type is "pointer like," we mean it models the properties above.</mark> This is why the smart pointers behave the way they do. It's also why `std::span` is so confusing. `std::span` looks like a container, so you expect it to behave the way a reference to a container would: comparing it would compare the elements in the span. But you can reassign spans, and that assignment doesn't reassign the underlying elements, it just reassigns the underlying pointer to point to new elements. So to be consistent, the standard chose the lesser of two evils and made span model a pointer, and thus has pointer semantics all around. When you compare a span, you're asking "do these spans provide a view onto literally the same content in memory," just like comparing a pointer. <mark style="background: #FFB86CA6;">In C++20 they formalized this "container reference API but pointer semantics" notion with the view concept.</mark>
 
-## ## Reference's semantics
+## Reference's semantics
 
 <mark style="background: #FFB86CA6;">A reference is not actually a distinct type</mark>, just like that the second quote states: there is no actual object that "represents" a reference. You cannot take the address of the reference itself. If you do `sizeof(T&)`, you will get the same answer as `sizeof(T)`. So most accurately, <mark style="background: #FFB86CA6;">a reference is an <em>alias</em> for the actual instance of an object</mark>.
 

@@ -20,3 +20,5 @@ Unliked unscoped `enum`s, the scoped `enum`'s names are local to the `enum` and 
 
 >[!info] Tip
 >Use `using enum <name>` (requires C++20) to introduce the names in an `enum` in to the current scope.
+
+The general consensus seems to be that you should always use `enum class` when possible.
