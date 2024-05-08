@@ -1,0 +1,5 @@
+# Ignore Obsidian files.
+.obsidian/
+
+# Ignore PDF files.
+PDFs/
