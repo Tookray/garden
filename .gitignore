@@ -3,3 +3,6 @@
 
 # Ignore PDF files.
 PDFs/
+
+# Ignore journal.
+Journal/
