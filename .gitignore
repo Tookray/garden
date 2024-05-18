@@ -4,5 +4,8 @@
 # Ignore PDF files.
 PDFs/
 
-# Ignore journal.
+# Ignore journal entries.
 Journal/
+
+# Ignore MacOS files.
+**/.DS_Store
