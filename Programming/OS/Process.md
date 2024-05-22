@@ -37,3 +37,7 @@ The UNIX system has three main system calls for handling processes.
 <mark style="background: #FFB86CA6;">Signals</mark> are used to control (stop, continue, terminate, etc.) processes. The notion of <mark style="background: #FFB86CA6;">users</mark> allow us to limit who (user) can control what (process). The <mark style="background: #FFB86CA6;">superuser</mark> is a special type of user that can control all processes.
 
 ![[05. Process API.pdf]]
+
+## What's next?
+
+- [[Limited Direct Execution]]
