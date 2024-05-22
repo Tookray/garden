@@ -22,3 +22,18 @@ The process can be in one of the following <mark style="background: #FFB86CA6;">
 The <mark style="background: #FFB86CA6;">process list</mark> contains information about all the processes, and it is composed of <mark style="background: #FFB86CA6;">process control block</mark> that contains information about a specific process.
 
 ![[04. Process.pdf]]
+
+The UNIX system has three main system calls for handling processes.
+
+- `fork()`
+	- Useful for running the same program.
+	- Use the return code of `fork()` to handle the parent and child process.
+- `exec()`
+	- Useful for running a different program.
+	- Hijacks the current process.
+- `wait()`
+	- Enables some form of determinism for parent and child (i.e. the child process finishes before the parent process).
+
+<mark style="background: #FFB86CA6;">Signals</mark> are used to control (stop, continue, terminate, etc.) processes. The notion of <mark style="background: #FFB86CA6;">users</mark> allow us to limit who (user) can control what (process). The <mark style="background: #FFB86CA6;">superuser</mark> is a special type of user that can control all processes.
+
+![[05. Process API.pdf]]
