@@ -55,3 +55,25 @@ Tuning the parameters is *difficult*, to say the very least. For "hard-coded" va
 Another note is that the system should allow some user advice (hints) to help set priorities. Also, consider reserving the highest level priority levels for OS work (<mark style="background: #ADCCFFA6;">look into this</mark>).
 
 ![[08. Multi-level Feedback.pdf]]
+
+There exists a different class of schedulers known as <mark style="background: #FFB86CA6;">proportional-share or fair-share schedulers</mark>, and they revolve around the idea of <mark style="background: #FFB86CA6;">tickets</mark>. Higher priority processes get more tickets, that's it. However, there are some additional mechanisms to manipulate tickets in different and useful ways (take a look at <mark style="background: #D2B3FFA6;">section 9.2</mark>).
+
+- <mark style="background: #FFB86CA6;">Currency</mark>
+- <mark style="background: #FFB86CA6;">Transfer</mark>
+- <mark style="background: #FFB86CA6;">Inflation</mark>
+
+The different types of schedulers discussed are
+
+- <mark style="background: #FFB86CA6;">Lottery</mark>
+	- Non-deterministic as it relies on randomness.
+	- The benefit is that it avoids strange corner-case behaviours, is lightweight, and is quite performant. Furthermore, it becomes more fair as the job length increases (as shown by the fairness metric $F$).
+	- One question that doesn't really have an answer is: How to assign tickets?
+- <mark style="background: #FFB86CA6;">Stride</mark>
+	- Deterministic, but still fair.
+	- Uses the notion of <mark style="background: #FFB86CA6;">stride</mark> (some large number divided by the number of tickets assigned to the process) and <mark style="background: #FFB86CA6;">pass value</mark> (counter).
+	- The downside is that unlike the lottery scheduler, it has global state (for more information, look at <mark style="background: #D2B3FFA6;">page 7</mark>).
+- <mark style="background: #FFB86CA6;">Completely fair</mark>
+	- Probably the "best" scheduler here, however, it is very complex.
+	- It uses <mark style="background: #FFB86CA6;">virtual runtime</mark> for counting and tries to strike the balance (between performance and fairness) via control parameters like <mark style="background: #FFB86CA6;">schedule latency, minimum granularity, and niceness</mark> (weights).
+
+![[09. Lottery Scheduling.pdf]]
