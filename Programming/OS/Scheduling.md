@@ -77,3 +77,7 @@ The different types of schedulers discussed are
 	- It uses <mark style="background: #FFB86CA6;">virtual runtime</mark> for counting and tries to strike the balance (between performance and fairness) via control parameters like <mark style="background: #FFB86CA6;">schedule latency, minimum granularity, and niceness</mark> (weights).
 
 ![[09. Lottery Scheduling.pdf]]
+
+>[!todo]
+><mark style="background: #ADCCFFA6;">Section 10: Multi-CPU Scheduling</mark>
+
