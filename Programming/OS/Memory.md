@@ -9,3 +9,22 @@ The goals of <mark style="background: #FFB86CA6;">virtual memory</mark> are:
 - Protection (and isolation)
 
 ![[13. Address Space.pdf]]
+
+This section is really just about
+
+- `malloc`
+- `free`
+- `calloc`
+- `realloc`
+
+and the associated dangers with misuse including:
+
+- Forgetting to allocate memory (usually results in a <mark style="background: #FFB86CA6;">segmentation fault</mark>)
+- Not allocating enough memory (<mark style="background: #FFB86CA6;">buffer overflow</mark>)
+- Forgetting to initialize memory (<mark style="background: #FFB86CA6;">uninitialized read</mark>)
+- Forgetting to free memory (<mark style="background: #FFB86CA6;">memory leak</mark>)
+- Freeing memory before you are done with it (<mark style="background: #FFB86CA6;">dangling pointer</mark>)
+- Freeing memory repeatedly (<mark style="background: #FFB86CA6;">double free</mark>, undefined behaviour)
+- Calling `free()` incorrectly (<mark style="background: #FFB86CA6;">invalid free</mark>)
+
+![[14. Memory API.pdf]]
