@@ -1,8 +1,9 @@
 # Ignore Obsidian files.
 .obsidian/
 
-# Ignore PDF files.
+# Ignore PDFs and images.
 PDFs/
+Images/
 
 # Ignore journal entries.
 Journal/
